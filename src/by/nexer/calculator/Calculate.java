@@ -49,11 +49,7 @@ public class Calculate {
             if(res < 1){
                 throw new Exception("the Roman number can only be positive");
             }
-            for (Map.Entry<String, Integer> entry : RomaNum.romeNumbers.entrySet()) {
-                if(entry.getValue() == res){
-                    resultat = entry.getKey();
-                }
-            }
+            resultat = RomaNum.toRoman(res);
         }else{
             resultat = String.valueOf(res);
         }
